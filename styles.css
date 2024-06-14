@@ -294,6 +294,11 @@ body.model-body {
   color: black;
   font-weight: bold;
 }
+model-viewer{
+  width: 400px;
+  height: 300px;
+  margin: auto;
+} 
 
   
 
