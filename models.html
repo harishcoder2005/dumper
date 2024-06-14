@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <title>Follow Your Crew</title>
-</head>
-<body class="model-body">
+  </head>
+  <body class="model-body">
     <header>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="models.html" class="active">Models</a>
-            <a href="materials.html">Materials</a>
-        </nav>
+
+      <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="models.html" class="active">Models</a>
+          <a href="materials.html">Materials</a>
+      </nav>
+
+      <div class="search-box">
+        <input type="text" class="search-text" id="search-text" placeholder="search">
+        <img src="img/icon/search-icon.png" id="search-btn">
+        <div id="suggestions" class="suggestions"></div>
+      </div>
+
+      <h2 class="text"></h2>
+      
     </header>
 
-<script src="script.js"></script>
-</body>
+    <main class="model-main">
+
+      <div class="model-container">
+        <model-viewer src="models/deep_pool_head.glb" alt="DeadPool Model" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+        <h2>DeadPool</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo adipisci excepturi libero non minima dignissimos, architecto dolore quibusdam illum quas culpa. Impedit illo fugit error!</p>
+      </div>
+
+      <div class="model-container">
+        <model-viewer src="models/deep_pool_head.glb" alt="DeadPool Model" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+        <h2>DeadPool</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo adipisci excepturi libero non minima dignissimos, architecto dolore quibusdam illum quas culpa. Impedit illo fugit error!</p>
+      </div>
+
+      <div class="model-container">
+        <model-viewer src="models/deep_pool_head.glb" alt="DeadPool Model" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+        <h2>DeadPool</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo adipisci excepturi libero non minima dignissimos, architecto dolore quibusdam illum quas culpa. Impedit illo fugit error!</p>
+      </div>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

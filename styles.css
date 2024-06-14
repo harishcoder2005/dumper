@@ -14,7 +14,7 @@ body {
   display: none;
 }
 body {
-  /* padding: 1rem; */
+  padding: 1rem;  
   width: 100%;
   height: auto;
     animation: animateBg 2s linear infinite;
@@ -32,10 +32,54 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 1rem;
   z-index: 100;
 }
+
+.fade-in {
+  opacity: 1;
+}
+
+header h2 {
+  margin-top: 0.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+header .search-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  /* border: 1px solid red; */
+}
+header .search-box input.search-text {
+  position: relative;
+  background: none;
+  outline: none;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  color: white;
+  /* padding: 10px 30px 10px 10px; */
+}
+header .search-box input.search-text::placeholder {
+  color: white;
+}
+.search-box img#search-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+  cursor: pointer;
+}
+
 nav.navbar {
   display: flex;
   justify-content: center;
@@ -45,6 +89,7 @@ nav.navbar {
   background: rgba(71, 4, 71, 0.507);
   border: 2px solid purple;
   border-radius: 25px;
+  cursor: pointer;
 }
 nav.navbar a {
   text-decoration: none;
@@ -79,6 +124,7 @@ main.main h3 {
   position: relative;
   top: 0;
   margin: 0.2rem 0;
+  cursor: pointer;
 }
 main.main button.home-title {
   padding: 0.5rem 1rem;
@@ -89,6 +135,7 @@ main.main button.home-title {
   background: blue;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
 }
 main.main .box {
   width: 50%;
@@ -100,6 +147,7 @@ main.main .box {
   background: rgba(114, 101, 101, 0.525);
   border-radius: 0.5rem;
   border: 2px solid black;
+  cursor: pointer;
 }
 main.main .box .left {
   width: 50%;
@@ -125,6 +173,7 @@ main.main .box .left {
   background: blue;
   border-radius: 5px 25px 5px 25px;
   border: none;
+  cursor: pointer;
 }
 main.main .box .right {
   width: 100%;
@@ -178,7 +227,7 @@ main.main .box .right {
 /* models.html */
 
 body.model-body {
-  padding: 1rem;
+  padding: 0.2rem;
   width: 100%;
   height: auto;
     animation: animateBg1 2s linear infinite;
@@ -191,6 +240,62 @@ body.model-body {
     100% { background-position: 100% 0%; }
   }
 
+  main.model-main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background: #000; */
+  }
+  .model-container {
+    background: rgba(73, 68, 68, 0.281);
+    padding: 0.2rem;
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    border: 2px solid black;
+  }
+  .model-container h2 {
+    margin: 0.5rem;
+    color: white;
+    text-align: center;
+  }
+  .model-container p {
+    color: white;
+    text-align: center;
+  }
+
+  .suggestions {
+    position: absolute;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 1;
+}
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
+.highlight {
+  background-color: yellow; /* Change as per your highlight style */
+  color: black;
+  font-weight: bold;
+}
+
+  
 
 
 
